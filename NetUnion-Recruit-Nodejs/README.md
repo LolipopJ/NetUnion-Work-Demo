@@ -1,8 +1,8 @@
-#NetUnion招新页面-Demo
+# NetUnion招新页面-Demo
 
 ***
 
-##本地环境配置
+## 本地环境配置
 
 [Nodejs](http://nodejs.cn/)
 
@@ -10,7 +10,7 @@
 
 ***
 
-##本地查看网页
+## 本地查看网页
 
 **Chrome is recommended.**
 
@@ -57,12 +57,12 @@
 
 cmd移动到项目根目录，输入命令
 
->node index.js
+> node index.js
 
 此时即可使用浏览器访问本地服务器
 
->http://127.0.0.1:8080
+> http://127.0.0.1:8080
 
 或者访问
->http://localhost:8080
+> http://localhost:8080
 
