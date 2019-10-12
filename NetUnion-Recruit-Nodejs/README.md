@@ -1,14 +1,10 @@
 # NetUnion招新页面-Demo
 
-***
-
 ## 本地环境配置
 
 [Nodejs](http://nodejs.cn/)
 
 [mysql 5.7.27](https://dev.mysql.com/downloads/windows/installer/5.7.html)
-
-***
 
 ## 本地查看网页
 
