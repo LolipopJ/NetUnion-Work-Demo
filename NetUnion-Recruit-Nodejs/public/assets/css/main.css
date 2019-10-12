@@ -1,0 +1,497 @@
+/* Main */
+    body {
+        margin: 0;
+    }
+
+    #main {
+        font-family:Arial, "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    }
+
+/* Header */
+    .header-recruit, .header-infoQuery, .header-about {
+        font-family:"Times New Roman","Fangsong";
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.548);
+        color: white;
+    }
+
+    .header-recruit {
+        background: #61BFAD;
+    }
+
+    .header-infoQuery {
+        background: #167C80;
+    }
+
+    .header-about {
+        background: #17C37B;
+    }
+
+        .header-recruit h1,.header-infoQuery h1,.header-about h1 {
+            font-size: 60px;
+        }
+
+        .header-recruit p,.header-infoQuery p,.header-about p {
+            font-size: 25px;
+        }
+
+/* row */
+    .row {  
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+/* 创建三个列 */
+/* sidebar */
+    .side {
+        -ms-flex: 25%;
+        flex: 25%;
+        padding-top: 0px;
+    }
+
+/* mainbar */
+    .inner {   
+        -ms-flex: 50%;
+        flex: 50%;
+        padding-top: 60px;
+        text-align: center;
+    }
+
+/* Footer */
+    .footer-recruit, .footer-infoQuery, .footer-about {
+        margin-top: 60px;
+        font-family:Arial;
+        width: 100%;
+        padding: 25px;
+        font-size: 18px;
+        text-align: center;
+        color: white;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.548);
+    }
+
+    .footer-recruit {
+        background: #61BFAD;
+    }
+    
+    .footer-infoQuery {
+        background: #167C80;
+        position: fixed;
+        bottom: 0px;
+    }
+    
+    .footer-about {
+        background: #17C37B;
+    }
+
+/* Design */
+    .sendBtn {
+        position: relative;
+        cursor: pointer;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+        width: 30%;
+        padding: 5px 10px;
+        font-size: 18px;
+        background: rgb(71, 71, 71);
+        color: #e9e9e9;
+        border: 2px solid rgb(71, 71, 71);
+        text-align: center;
+    }
+
+        .sendBtn:hover{
+            animation: sendBtnshadow .5s forwards;
+            -webkit-animation: sendBtnshadow .5s forwards;
+        }
+
+        @keyframes sendBtnshadow {
+            to {box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.822);}
+        }
+
+        @-webkit-keyframes sendBtnshadow {
+            to {box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.822);}
+        }
+
+    img {
+        margin: 30px;
+    }
+
+/* background */
+    #background{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        
+        position: fixed;
+        z-index: -1;
+        top: 0; 
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        min-width: 1000px;
+    }
+
+        #background.vision {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #background.recruit {
+            background-color: #F9F7E8;
+        }
+
+        #background.about {
+            background-color: #F9F7E8;
+        }
+
+        #background.infoQuery {
+            background-color: #F9F7E8;
+        }
+
+/* 选中文本颜色 */
+    .selection-grey::selection{color:#fff;background:rgb(71, 71, 71);}
+    .selection-grey::-webkit-selection{color:#fff;background:rgb(71, 71, 71);}
+
+/* 
+    Loading-Animation
+    animation author: https://www.cnblogs.com/lhb25/p/loading-spinners-animated-with-css3.html
+*/
+    .loadingAnimation {
+        position: absolute;
+        z-index: 9999;
+        width: auto;
+        height: 120px;
+        font-size: 50px;
+
+        /* 居中 */
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    
+        .loadingAnimation > div {
+            background-color: rgb(0, 0, 0);
+            height: 100%;
+            width: 18px;
+            display: inline-block;
+                
+            -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+            animation: stretchdelay 1.2s infinite ease-in-out;
+        }
+
+        .loadingAnimation .rect2 {
+            -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s;
+        }
+
+        .loadingAnimation .rect3 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+
+        .loadingAnimation .rect4 {
+            -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
+        }
+
+        .loadingAnimation .rect5 {
+            -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s;
+        }
+
+        @-webkit-keyframes stretchdelay {
+            0%, 40%, 100% { 
+                -webkit-transform: scaleY(0.4) 
+            } 
+            20% { 
+                -webkit-transform: scaleY(1.0) 
+            }
+        }
+
+        @keyframes stretchdelay {
+            0%, 40%, 100% {
+                transform: scaleY(0.4);
+                -webkit-transform: scaleY(0.4);
+            }  
+            20% {
+                transform: scaleY(1.0);
+                -webkit-transform: scaleY(1.0);
+            }
+        }
+
+/* Cover */
+    .cover{
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 0px;
+        background-color: rgba(255, 255, 255, 0.3);
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.582);
+
+        animation: display 1.8s .6s forwards;
+        -webkit-animation: display 1.8s .6s forwards;
+    }
+
+    @keyframes display {
+        to {height: 300px}
+    }
+
+    @-webkit-keyframes display {
+        to {height: 300px}
+    }
+
+        .cover #typedWords {
+            position: inherit;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            color: rgb(0, 0, 0, 0);
+
+            font: 100% monospace;
+            font-size: 60px;
+            border-right: .08em solid;
+            width: 13ch;
+            white-space: nowrap;
+            overflow: hidden;
+
+            animation: appear .5s 2.6s forwards ease-in-out, typing 3s 2.6s steps(13, end), blink-caret .8s 2.6s step-end infinite alternate;
+            -webkit-animation: appear .5s 2.6s forwards ease-in-out, typing 3s 2.6s steps(13, end), blink-caret .8s 2.6s step-end infinite alternate;
+        }
+
+        @-webkit-keyframes appear {
+            to {color: rgb(0, 0, 0);}
+        }
+
+        @-webkit-keyframes typing {
+            from { width: 0}
+        }
+    
+        @-webkit-keyframes blink-caret {
+            50% { border-color: transparent; }
+        }
+
+        @keyframes appear {
+            to {color: rgb(0, 0, 0);}
+        }
+
+        @keyframes typing {
+            from { width: 0}
+        }
+    
+        @keyframes blink-caret {
+            50% { border-color: transparent; }
+        }
+
+/* Intro */
+    #intro {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        color: rgb(255, 255, 255);
+        font-family: 'FangSong';
+        
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: bold;
+        text-shadow: rgb(0, 0, 0) 1px 1px 6px;
+    }
+
+/* Buttons */
+    .cover #btnS {
+        position: inherit;
+        cursor: pointer;
+
+        left: 50%;
+        top: 83%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        padding: 5px 10px;
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0);
+        color: #000000;
+        border: 2px solid #000000;
+        text-align: center;
+    }
+
+        .cover #btnS:hover{
+            animation: btnSshadow .5s forwards;
+            -webkit-animation: btnSshadow .5s forwards;
+        }
+
+        @keyframes btnSshadow {
+            to {box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.493);}
+        }
+
+        @-webkit-keyframes btnSshadow {
+            to {box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.493);}
+        }
+
+    .cover #btnN {
+        position: inherit;
+        cursor: pointer;
+
+        left: 50%;
+        top: 83%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        padding: 5px 10px;
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0);
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        text-align: center;
+    }
+
+        .cover #btnN:hover{
+            animation: btnNshadow .5s forwards;
+            -webkit-animation: btnNshadow .5s forwards;
+        }
+
+        @keyframes btnNshadow {
+            to {box-shadow: 0px 0px 8px rgb(79, 255, 255);}
+        }
+
+        @-webkit-keyframes btnNshadow {
+            to {box-shadow: 0px 0px 8px rgb(79, 255, 255);}
+        }
+
+    .cover #btnNN {
+        position: inherit;
+        cursor: pointer;
+
+        left: 50%;
+        top: 83%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        padding: 5px 10px;
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0);
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        text-align: center;
+    }
+
+        .cover #btnNN:hover{
+            animation: btnNNshadow .5s forwards;
+            -webkit-animation: btnNNshadow .5s forwards;
+        }
+
+        @keyframes btnNNshadow {
+            to {box-shadow: 0px 0px 8px rgb(79, 255, 255);}
+        }
+
+        @-webkit-keyframes btnNNshadow {
+            to {box-shadow: 0px 0px 8px rgb(79, 255, 255);}
+        }
+    
+    .cover #btnNNN {
+        position: inherit;
+        cursor: pointer;
+
+        left: 50%;
+        top: 83%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        padding: 5px 10px;
+        font-size: 20px;
+        background: rgb(71, 71, 71);
+        color: #e9e9e9;
+        border: 2px solid rgb(71, 71, 71);
+        text-align: center;
+    }
+
+        .cover #btnNNN:hover{
+            animation: btnNNNshadow .5s forwards;
+            -webkit-animation: btnNNNshadow .5s forwards;
+        }
+
+        @keyframes btnNNNshadow {
+            to {box-shadow: 0px 0px 8px rgb(0, 0, 0);}
+        }
+
+        @-webkit-keyframes btnNNNshadow {
+            to {box-shadow: 0px 0px 8px rgb(0, 0, 0);}
+        }
+
+    .cover #btnNNNN {
+        position: inherit;
+        cursor: pointer;
+
+        left: 50%;
+        top: 83%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        padding: 5px 10px;
+        font-size: 20px;
+        background: rgb(71, 71, 71);
+        color: #e9e9e9;
+        border: 2px solid rgb(71, 71, 71);
+        text-align: center;
+    }
+
+        .cover #btnNNNN:hover{
+            animation: btnNNNNshadow .5s forwards;
+            -webkit-animation: btnNNNNshadow .5s forwards;
+        }
+
+        @keyframes btnNNNNshadow {
+            to {box-shadow: 0px 0px 8px rgb(0, 0, 0);}
+        }
+
+        @-webkit-keyframes btnNNNNshadow {
+            to {box-shadow: 0px 0px 8px rgb(0, 0, 0);}
+        }    
+
+    .cover #btnJU {
+        position: inherit;
+        cursor: pointer;
+
+        left: 50%;
+        top: 83%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        padding: 5px 10px;
+        font-size: 20px;
+        background: rgb(71, 71, 71);
+        color: #e9e9e9;
+        border: 2px solid rgb(71, 71, 71);
+        text-align: center;
+    }
+
+        .cover #btnJU:hover{
+            animation: btnJUshadow .5s forwards;
+            -webkit-animation: btnJUshadow .5s forwards;
+        }
+
+        @keyframes btnJUshadow {
+            to {box-shadow: 0px 0px 8px rgb(0, 0, 0);}
+        }
+
+        @-webkit-keyframes btnJUshadow {
+            to {box-shadow: 0px 0px 8px rgb(0, 0, 0);}
+        }      
