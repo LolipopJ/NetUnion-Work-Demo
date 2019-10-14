@@ -20,9 +20,12 @@
     
     const conn = mysql.createConnection({
         host: 'localhost',
-        user: '\*MySQL用户',
-        password: '\*密码',
-        database: '\*数据库名',
+        //MySQL用户名
+        user: '*',
+        //密码
+        password: '*',
+        //数据库名
+        database: '*',
         multipleStatements: true
     })
 
@@ -34,17 +37,17 @@
         host: 'smtp.qq.com',
         auth: {
             //发件人邮箱
-            user: '\*', 
+            user: '*', 
             //邮箱授权码
-            pass: '\*'  
+            pass: '*'  
         }
     }
 
     let mail = {
         //发件人
-        from: '\*',
+        from: '*',
         //收件邮箱
-        to: '\*',
+        to: '*',
         //title
         subject: "2019招新-"+department+"-"+name+":"+stdnumber,
         //正文
