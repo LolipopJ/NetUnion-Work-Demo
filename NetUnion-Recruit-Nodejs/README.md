@@ -4,6 +4,8 @@
 
 [Nodejs](http://nodejs.cn/)
 
+依赖文件见package.json，使用node进行下载即可。
+
 [mysql 5.7.27](https://dev.mysql.com/downloads/windows/installer/5.7.html)
 
 ## 本地查看网页
