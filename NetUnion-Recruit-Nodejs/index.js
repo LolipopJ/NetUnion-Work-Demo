@@ -60,12 +60,11 @@ app.post("/api/infoQuery",(req,res) => {
             console.log(result);
             console.log("#################");
 
-            //默认取该学号的第一次提交结果
+            //默认取该学号的第一次提交结果，将结果显示在'/info-query.html/result/学号'网页上
             let data = result[0];
             var Address = '/info-query.html/result/'+stdnumberQuery;
 
             if (data == undefined){
-                console.log('未报名。');
                 app.get(Address, function(req,res){
                     res.send("该学号未报名！");
                 })

@@ -18,54 +18,72 @@
 
 + 使用全部功能
 
-打开根目录下的文件index.js，对mysql进行设置。根据实际使用情况修改下方带\*号的配置：
-    
-    const conn = mysql.createConnection({
-        host: 'localhost',
-        //MySQL用户名
-        user: '*',
-        //密码
-        password: '*',
-        //数据库名
-        database: '*',
-        multipleStatements: true
-    })
+1. 建立数据库，其中表名设置为'info'，表中元素应包括[name,sex,nickname,email,intention,intro,uid,phone]以及自增key[id]：
 
+        CREATE DATABASE 数据库名 CHARACTER SET utf8;
 
-对sendmailer接口进行编辑。根据实际使用情况修改下方带\*号的配置：
-    
-    const config = {
-        //默认为qq邮箱
-        host: 'smtp.qq.com',
-        auth: {
-            //发件人邮箱
-            user: '*', 
-            //邮箱授权码
-            pass: '*'  
+        USE 数据库名;
+
+        CREATE TABLE info (
+            id int(4) auto_increment key,
+            name varchar(16) not null,
+            sex char(4) not null,
+            nickname varchar(16) not null,
+            email varchar(40) not null,
+            intention char(10) not null,
+            intro varchar(300) not null,
+            uid char(13) not null,
+            phone char(11) not null
+        );
+
+2. 打开根目录下的文件index.js，对mysql进行设置。根据实际使用情况修改下方带\*号的配置：
+
+        const conn = mysql.createConnection({
+            host: 'localhost',
+            //MySQL用户名
+            user: '*',
+            //密码
+            password: '*',
+            //数据库名
+            database: '*',
+            multipleStatements: true
+        })
+
+3. 对sendmailer接口进行编辑。根据实际使用情况修改下方带\*号的配置：
+
+        const config = {
+            //默认为qq邮箱
+            host: 'smtp.qq.com',
+            auth: {
+                //发件人邮箱
+                user: '*', 
+                //邮箱授权码
+                pass: '*'  
+            }
         }
-    }
 
-    let mail = {
-        //发件人
-        from: '*',
-        //收件邮箱
-        to: '*',
-        //title
-        subject: "2019招新-"+department+"-"+name+":"+stdnumber,
-        //正文
-        text: describe+" 的 "+name+", "+sex+"\n.意向部门是: "+department+"\n也可以叫我: "+nickname+"\n电子邮箱: "+emailAddress+"\n手机号码: "+phonenumber+"\nAbout me: "+introduction,
-    }
+        let mail = {
+            //发件人
+            from: '*',
+            //收件邮箱
+            to: '*',
+            //title
+            subject: "2019招新-"+department+"-"+name+":"+stdnumber,
+            //正文
+            text: describe+" 的 "+name+", "+sex+"\n.意向部门是: "+department+"\n也可以叫我: "+nickname+"\n电子邮箱: "+emailAddress+"\n手机号码: "+phonenumber+"\nAbout me: "+introduction,
+        }
 
-cmd移动到项目根目录，输入命令
+4. cmd移动到项目根目录，输入命令
 
-> node index.js
+    > node index.js
 
-此时即可使用浏览器访问本地服务器
+    此时即可使用浏览器访问本地服务器
 
-> http://127.0.0.1:8080
+    > http://127.0.0.1:8080
 
-或者访问
-> http://localhost:8080
+    或者访问
+
+    > http://localhost:8080
 
 ## 关于
 
@@ -77,7 +95,7 @@ cmd移动到项目根目录，输入命令
 
 ## 亟待更新
 
-**重要**
+### 重要
 
 + **页面设计**
 
@@ -87,7 +105,7 @@ cmd移动到项目根目录，输入命令
 
     实现查询数据库后动态刷新info-query页面，而不是跳转到新的空白页面显示结果。
 
-**不重要**
+### 不重要
 
 + **侧边栏**
 
