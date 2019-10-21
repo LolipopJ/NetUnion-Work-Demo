@@ -10,15 +10,15 @@
 
 ## 本地查看网页
 
-**Chrome is recommended.**
+**Chrome is always recommended.**
 
-+ 不调用发邮件和查询报名信息的功能，仅查看网页
+### 不调用发邮件和查询报名信息的功能，仅查看网页
 
 直接打开根目录下public文件夹中的index.html
 
-+ 使用全部功能
+### 使用全部功能
 
-1. 建立数据库，其中表名设置为'info'，表中元素应包括[name,sex,nickname,email,intention,intro,uid,phone]以及自增key[id]：
+1. 建立数据库，其中表名设置为'info'，表中元素应包括[name,sex,nickname,email,intention,intro,uid,phone]以及自增关键字[id]：
 
         CREATE DATABASE 数据库名 CHARACTER SET utf8;
 
@@ -87,11 +87,13 @@
 
 ## 关于
 
-+ **Nodejs+JavaScript：实现前后端串联**
+### Nodejs+JavaScript：实现前后端串联
 
-    1. 引入express框架，渲染静态页面。访问监听的本地窗口时进入到index页面。
-    2. 通过ajax方法，将前端表单填写的报名信息内容传递给服务器端。调用nodemailer模块实现邮件的发送。
-    3. 通过ajax方法，将前端填写的学号信息传递给后端，调用mysql模块，对数据库内容进行检索。最后将结果返回前端页面。
+1. 引入express框架，渲染静态页面。访问监听的本地窗口时进入到index页面。
+
+2. 通过ajax方法，将前端表单填写的报名信息内容传递给服务器端。调用nodemailer模块实现邮件的发送。
+
+3. 通过ajax方法，将前端填写的学号信息传递给后端，调用mysql模块，对数据库内容进行检索。最后将结果返回前端页面。
 
 ## 亟待更新
 
