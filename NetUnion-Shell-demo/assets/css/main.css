@@ -1,0 +1,50 @@
+body {
+    font-family: "微软雅黑";
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(22, 22, 22);    
+}
+
+body ::selection {
+    background-color: #55f9ff;
+    color: #ffffff
+}
+
+* {
+    cursor: text;
+    -webkit-tap-highlight-color: transparent
+}
+
+.group {
+    color: rgb(255, 89, 89);
+}
+
+.user {
+    color: rgb(111, 173, 255);
+}
+
+.position {
+    color: greenyellow;
+}
+
+#main {
+    font-family: "微软雅黑";
+    font-size: 20px;
+}
+
+.command-text {
+    font-family: "微软雅黑";
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #fff;
+    width: 300px;
+    padding-block-end: 0
+}
