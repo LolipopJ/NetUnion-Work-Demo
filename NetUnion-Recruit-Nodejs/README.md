@@ -1,5 +1,7 @@
 # NetUnion招新页面-Demo
 
+**Chrome is always recommended.**
+
 ## 本地环境配置
 
 [Nodejs](http://nodejs.cn/)
@@ -9,8 +11,6 @@
 [mysql 5.7.27](https://dev.mysql.com/downloads/windows/installer/5.7.html)
 
 ## 本地查看网页
-
-**Chrome is always recommended.**
 
 ### 不调用发邮件和查询报名信息的功能，仅查看网页
 

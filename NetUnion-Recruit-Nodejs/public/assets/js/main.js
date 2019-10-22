@@ -10,6 +10,7 @@ $(function(){
         $.ajax({
             type: "POST",
             url: "http://127.0.0.1:8080/api/infoQuery",
+            cache: false,
             data: formData,
             processData: false,
             contentType: false,
@@ -61,7 +62,7 @@ $(function(){
 
             //招新标准 & 防止恶意邮件
             if(!(stdnumber.slice(0,4)=="2018"||stdnumber.slice(0,4)=="2019")){
-                alert("本页面招新只面向2018级和2019级的电子科技大学本科生开放！");
+                alert("本页面招新只面向电子科技大学2018级和2019级的本科生开放！");
                 return false;
             }
         }
