@@ -57,19 +57,25 @@
 ##### 请求信息
 
 协议: `HTTPS`
+
 地址: `https://shell.recruit.netunion.ondev.cn/run`
+
 方法: `GET`
 
 ##### 请求参数
 
 名称: `cmd`
+
 位置: `QUERY`
+
 类型: `STRING`
+
 必填: `是`
 
 ##### 返回信息
 
 返回参数位置: `BODY`
+
 返回参数类型: `STRING`
 
 ##### 错误码

@@ -1,7 +1,7 @@
 body {
     font-family: "微软雅黑";
     margin: 0;
-    padding: 10px;
+    padding: 30px;
     font-size: 20px;
     color: white;
     background-color: rgb(22, 22, 22);    
@@ -46,5 +46,5 @@ body ::selection {
     font-size: 20px;
     color: #fff;
     width: 300px;
-    padding-block-end: 0
+    padding-block-end: 0;
 }
