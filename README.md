@@ -30,6 +30,8 @@
 
 ## 实现一个简单的终端模拟器
 
+**[NetUnion-Shell-demo](https://github.com/JasonSun2018/NetUnion-Work-Demo/tree/master/NetUnion-Shell-demo)**
+
 ### 功能要求
 
 + 历史记录支持。

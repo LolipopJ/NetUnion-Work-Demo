@@ -1,6 +1,6 @@
 # 模拟shell终端网页
 
-**[Web 模拟终端博客系统](https://github.com/airingursb/terminal)给我提供了最主要的思路与方法。**
+**[Web 模拟终端博客系统](https://github.com/airingursb/terminal)向我提供了最主要的思路与方法。**
 
 **Chrome is always recommended.**
 
@@ -23,6 +23,8 @@
 ### 技术性
 
 + 实现Shell终端分屏
+
++ fix bugs
 
 ### 功能性
 
