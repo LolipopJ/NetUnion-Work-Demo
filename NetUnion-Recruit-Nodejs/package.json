@@ -17,7 +17,7 @@
     "http": "0.0.0",
     "multiparty": "^4.2.1",
     "mysql": "^2.17.1",
-    "nodemailer": "^6.3.1",
+    "nodemailer": "^6.4.16",
     "url": "^0.11.0"
   }
 }
